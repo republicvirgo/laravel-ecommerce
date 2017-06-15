@@ -23,8 +23,23 @@ p{
     font-size: 16px;
 }
 // remove all border radius
-.jumbotron, .navbar{
+.jumbotron, .navbar, .btn{
     border-radius: 0px!important;
+}
+// remove brder radius from input and textarea
+.no-radius{
+    border: 1px solid #000!important;
+    border-radius: 0px!important;
+}
+// form input field height
+.form-control{
+    min-height: 50px;
+}
+// short hr
+
+.short-hr{
+    max-width: 100px;
+    border-bottom: 2px solid #fff;
 }
 // navbar customization
 .navbar {

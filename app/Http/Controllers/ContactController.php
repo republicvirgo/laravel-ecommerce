@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ContactFormRequest;
 
-class AboutController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class AboutController extends Controller
      */
     public function index()
     {
-        return view('about.index');
+        return view('contact.index');
     }
 
     /**
@@ -32,9 +33,22 @@ class AboutController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ContactFormRequest $request)
     {
-        //
+        $data = [
+            'name' => $request->get('name'),
+            'email' => $request->get('email'),
+            'user_message' => $request->get('message'),
+        ];
+
+        \Mail::send('emails.contact', $data, function($message)
+        {
+            $message->from(env('MAIL_FROM'));
+            $message->to(env('MAIL_FROM'), env('MAIL_NAME'));
+            $message->subject('pallighting.com Inquiry');
+        });
+
+        return \Redirect::route('contact')->with('message', 'Thank you for contacting us.');
     }
 
     /**

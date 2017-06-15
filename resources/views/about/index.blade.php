@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-sm-12 text-center jumbotron blue-jumbotron">
                 <h1>About Pal</h1>
-                    <hr>
+                    <hr class="short-hr">
                     <p>Welcome to Pal Lighting. We are a family run company servig the world</p>
             </div>
         </div>
