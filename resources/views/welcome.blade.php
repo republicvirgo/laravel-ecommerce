@@ -1,17 +1,13 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('app')
 
-        <title>ecom</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <h1>Welcome to ecom</h1>
-        @yield('content')
-    </body>
-</html>
+@section('content')
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 text-center jumbotron blue-jumbotron">
+                <h1>Pal Lighting</h1>
+                    <hr>
+                    <p>Leading pool lights manufacturer</p>
+            </div>
+        </div>
+    </div>
+@endsection

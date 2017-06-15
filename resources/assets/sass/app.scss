@@ -7,3 +7,55 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// custom css
+// body margin excluding navbar
+#content{
+    margin-top: -24px;
+}
+// blue jumtotron
+.blue-jumbotron{
+    background: linear-gradient(145deg,#0d47a1,#42a5f5);
+    color: #fff;
+}
+// all p font size
+p{
+    font-size: 16px;
+}
+// remove all border radius
+.jumbotron, .navbar{
+    border-radius: 0px!important;
+}
+// navbar customization
+.navbar {
+    min-height: 80px;
+    background-color: #1976d2;
+    border-color: #1976d2;
+}
+.navbar-brand {
+    font-size: 28px!important;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+    color: #fff!important;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.navbar-nav > li > a:hover, .navbar-brand:hover {
+    color: #000!important;
+}
+.active a, .dropdown-toggle {
+    background-color: #1976d2!important;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;}
+}
